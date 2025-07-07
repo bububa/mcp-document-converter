@@ -1,4 +1,4 @@
-# MCP-Pandoc
+# mcp-document-converter
 
 A simple and powerful document conversion MCP server using Pandoc.
 
@@ -40,11 +40,11 @@ Built on the industry-standard Pandoc conversion engine.
 1. Clone this repository
 2. Build the server:
    ```
-   go build -o pandoc-server.exe ./cmd/main.go
+   go build -o mcp-document-converter ./cmd/main.go
    ```
 3. Run the server:
    ```
-   ./pandoc-server.exe
+   ./mcp-document-converter
    ```
 
 ## Integration with Cursor IDE
@@ -55,8 +55,7 @@ To integrate with Cursor IDE, add the following to your MCP configuration file (
 // In the "servers" section
 "pandoc_mcp_go": {
   "type": "stdio",
-  "command": "C:/SnowWhiteAI/MCP_servers/mcp-pandoc-go/pandoc-mcp-go.exe",
-  "cwd": "C:/SnowWhiteAI/MCP_servers/mcp-pandoc-go"
+  "command": "mcp-ducument-converter",
 }
 
 // In the "roots" section

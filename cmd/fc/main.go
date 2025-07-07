@@ -1,14 +1,13 @@
 package main
 
 import (
-	"flag"
+	"os"
+	"strconv"
 
 	"github.com/bububa/mcp-document-converter/internal"
 )
 
 func main() {
-	var port int
-	flag.IntVar(&port, "port", 0, "sse server port")
-	flag.Parse()
+	port, _ := strconv.Atoi(os.Getenv("MCP_DOCUMENT_CONVERTER_PORT"))
 	internal.StartServer(port)
 }
